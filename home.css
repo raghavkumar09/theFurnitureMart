@@ -1,0 +1,436 @@
+/* Global Reset */
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+  font-family: 'Muli', sans-serif;
+}
+
+a{
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+}
+
+img{
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+section{
+  padding: 3rem 0;
+}
+
+.section-title{
+  text-align: center;
+  padding-bottom: 1.2rem;
+}
+
+.container{
+  width: 100%;
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Nav Bar */
+.mainNav{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* padding: 1rem 0; */
+}
+
+#header-logo img{
+  height: 5em;
+  width: 5em;
+}
+
+.menu-icons i{
+  font-size: 2.0rem;
+  color: black;
+  cursor: pointer;
+}
+
+.close i{
+  color: red;
+}
+
+.nav-links{
+  width: 100vw;
+  height: 100vh;
+  background-color: #FFCB9C;
+  position: fixed;
+  top: 0;
+  right: -101vw; /* remove from view */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1500; /* Higher number = higher stack order or top of stack */
+  transition: all 650ms ease-in-out;
+}
+
+.nav-links.active{
+  right: 0;
+}
+
+.close{
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+}
+
+.nav-links li{
+  margin: 2rem 0;
+}
+
+.nav-links a{
+  font-size: 1.6rem;
+  color: black;
+}
+
+/* Showcase */
+.showCase-container{
+  height: 45vh;
+  background: linear-gradient(rgba(70, 69, 69, 0.5), rgba(70, 69, 69, 0.5)), 
+  url("img/showcase1.jpg"); /* Adds opacity to the background */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  top: 0;
+  bottom: 0;
+}
+
+/* 
+.showCase-container::after{
+  background: url('img/showcase1.jpg') center no-repeat;
+  content: '';
+  opacity: .8;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 45vh;
+  z-index: -1;
+} */
+
+.showCase-description{
+  padding: 4rem 2rem;
+  color: #fff;
+}
+
+.showCase-description h1{
+  font-size: 1.7rem;
+}
+
+.showCase-description p{
+  font-size: .9em;
+  padding: 1rem 0px;
+}
+
+.showCase-description button{
+  font-size: .7rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+  background-color: #CD853F;
+  padding: .7rem 1.2rem;
+  border-radius: 50px;
+  outline: none;
+}
+
+/* About */
+#aboutMe p{
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Menu */
+#menu-container h2{
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+#menuContainerDesc{
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+.menuItems{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); /* adds responsiveness */
+    /* minmax = box is flexible but has to have a minimum of 25rem */
+  grid-gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.menu-title{
+  text-align: center;
+  padding: .8rem;
+  font-weight: 600;
+}
+
+.menu-description{
+  text-align: center;
+  font-style: italic;
+}
+
+/* Location and Hours */
+.location-container{
+  height: 30vh;
+  background: linear-gradient(rgba(70, 69, 69, 0.9), rgba(70, 69, 69, 0.5)), url("img/hoursshowcase.jpg");
+  /* background: url('img/hoursshowcase.jpg') center no-repeat; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  top: 0;
+  bottom: 0;
+}
+
+.location-info{
+  color: #fff;
+  font-weight: 600;
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  top: 25%;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.location-shop{
+  padding-top: 10px;
+}
+
+/* Gallery */
+.gallery-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); /* adds responsiveness */
+    /* minmax = box is flexible but has to have a minimum of 25rem */
+  grid-gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Feedback */
+.contactUs-description{
+  text-align: center;
+}
+
+.contactUs-description p{
+  font-size: 1em;
+  font-style: italic;
+}
+
+form{
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  margin: 50px auto; /*Auto is whats making it centered */
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0,0,0,.5)
+}
+
+label{
+  display: block; /*block breaks up the elements */
+  padding: 15px 0px;
+}
+
+input, textarea{  /*change the size of the input areas and textarea */
+  width: 96%;
+  padding: 10px;
+  border: 1px solid transparent;
+  background-color: #ececec;
+  outline: none;
+  transition: all 0.5s;
+}
+
+input:focus, textarea:focus{
+  border: 2px solid #CD853F;
+  background-color: #fff;
+}
+
+
+button{
+  padding: 15px 15px;
+  margin: 20px 0px;
+  border: none;
+  background-color: #CD853F;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color .5s;
+  text-transform: uppercase;
+  border-radius: 0;
+}
+
+button:hover{
+  background-color: #3AC7F2;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+textarea{
+  min-height: 100px;
+  max-height: 300px;
+  resize: vertical;
+}
+
+form label{
+  display: block;
+}
+
+/* Footer */
+footer{
+  background-color: #3fcdcd;
+}
+
+footer .section-title{
+  font-size: 1.3rem;
+  text-align: left;
+  padding-top: 2rem;
+}
+
+.info-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#phoneNum{
+  font-weight: 600;
+}
+
+.footer-socials i{
+  padding-right: 1rem;
+}
+
+.copyright{
+  padding-bottom: 1rem;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 2rem;
+} 
+
+.copyright p{
+  font-size: .9rem;
+}
+
+
+/* Media Queries */
+@media screen and (min-width: 700px){
+  /* Nav */
+  .nav-links{
+    width: initial;
+    height: initial;
+    background-color: transparent;
+    position: initial;
+    top: initial;
+    right: initial;
+    flex-direction: row;
+    transition: initial;
+  }
+
+  .menu-icons{
+    display: none;
+  }
+
+  .nav-link a{
+    transition: all .3s ease-in-out;
+    font-size: 1.1rem;
+    margin: 0px 1rem;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 5px;
+  }
+
+  .nav-link a:hover{
+    border-bottom: 2px solid black;
+  }
+
+  /* Menu */
+  .menuItems{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); /* adds responsiveness */
+      /* minmax = box is flexible but has to have a minimum of 25rem */
+    grid-gap: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Footer */
+  .info-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 auto;
+  }
+
+  .footer-socials i{
+    padding-right: 15px;
+    font-size: 1.3rem;
+  }
+}
+
+
+@media screen and (min-width: 950px){
+  .container{
+    width: 80%;
+    margin: 0 auto;
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* Showcase */
+  .showCase-container{
+    height: 50vh;
+    background: linear-gradient(rgba(70, 69, 69, 0.5), rgba(70, 69, 69, 0.5)), url("img/showcase1.jpg");
+    /* background: url('img/showcase1.jpg') center no-repeat; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 0;
+    bottom: 0;
+  }
+  .showCase-description h1{
+    font-size: 2.2rem;
+    margin-top: 4rem;
+  }
+  
+  .showCase-description p{
+    font-size: 1.1em;
+    padding: 1rem 0px;
+  }
+ 
+  /* Location and Hours */
+  .location-container{
+    height: 50vh;
+    background: linear-gradient(rgba(70, 69, 69, 0.6), rgba(70, 69, 69, 0.6)), url("img/hoursshowcase.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 0;
+    bottom: 0;
+  }
+
+  .location-info{
+    top: 35%;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  
+}
