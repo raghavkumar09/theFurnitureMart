@@ -4,7 +4,7 @@ Fictional furniture mart website with a single-page design.
 
 ## Link to Live Site
 
-https://github.com/raghavkumar09/LGM_VIP_WebDev
+https://raghavkumar09.github.io/theFurnitureMart
 
 ## Objectives
 
